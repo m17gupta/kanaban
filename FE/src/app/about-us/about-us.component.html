@@ -1,0 +1,81 @@
+
+<mat-toolbar style="background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+" >
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+     <h1> KanBan </h1>
+   
+    </mat-toolbar-row>
+
+    <mat-toolbar color="primary" class="matfooter">
+      <div class="footer">
+        CopyRight © Kanban Board 2022. ALL RIGHTS RESERVED. &nbsp;&nbsp;&nbsp;&nbsp; <a href="/privacy-policy " style="color:white;text-decoration: none;">Privacy Policy</a>
+      </div>
+      </mat-toolbar>
+  
+    
+
+    
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav #sidenav opened="true" mode="side"   class="home">
+       
+      <mat-nav-list >
+        <!-- <a mat-list-item  routerLink="/about"  >About us</a> -->
+         <a mat-list-item  routerLink="/signup" >Sign Up</a>
+        <a mat-list-item  routerLink="/login" >login</a>
+        <a mat-list-item  routerLink="/home" >Home</a>
+        <!-- <a mat-list-item  (click)="createKanban()" style="color:black">Create kanaban</a> -->
+       
+    
+     </mat-nav-list>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height:88vh" class="signup">
+     
+        <!-- <img src="" style="width: 100%;height: 80%;"> -->
+        <!-- <h2 style="margin-left: 45%;">Please contact us </h2> -->
+        <div style="font-size: 50px;margin-top: 30px;margin-left: 170px;" class="bolded">Take the work out of managing your teams workflow
+            <br/>
+            <br/>
+            <br/>
+            <h1 style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="bolded" >Get out of outdated spreadsheets</h1>
+            
+        </div>
+        <p style="font-size: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 10%;">With a simple visual serving as your single source of truth, you can quickly see all tasks and their latest status and updates.</p>
+        <br/>
+        <br/>
+        <h1 style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-left: 10%;" class="bolded" >See all work in progress at a glance</h1>
+        <p style="font-size: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 10%;">Get a high-level view of your project in progress in real-time. Just drag & drop cards to move tasks through each workflow stage.</p>
+        <br/>
+        <br/>
+        <h1 style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-left: 10%;" class="bolded" >Easily analyze workflows for bottlenecks and inefficiencies</h1>
+        <p style="font-size: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 10%;">See exactly where tasks are getting stuck in your workflow, so you can add resources, refine your process, or change requirements.</p>
+        <br/>
+        <br/>
+        <h1 style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-left: 10%;" class="bolded" >Plan and implement new workflows in minutes</h1>
+        <p style="font-size: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 10%;">Create, prioritize, and assign tasks without leaving the Board in your project.</p>
+        <br/>
+        <br/>
+        <br/>
+        <p style="font-size: 20px;margin-left: 150px;">please contact us on </p>
+        <br/>
+        <p style="margin-left: 150px;"font-size:20px>kanbanapplication@gmail.com</p>
+        
+        <!-- <div>
+            <mat-icon style="margin-left :150px;"> email </mat-icon>
+            <p style="margin-bottom:10%;">kanbanapplication@gmail.com</p>
+           <span style="margin-top: 50px;"> <a href="#" >kanbanapplication@gmail.com</a></span>  -->
+        <!-- </div> -->
+
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+    

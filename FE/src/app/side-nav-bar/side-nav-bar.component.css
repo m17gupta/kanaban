@@ -1,0 +1,51 @@
+.pic{
+    width:60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left:50px;
+    margin-top: 10px;
+  
+  }
+  .footer{
+    margin-top: auto;
+    font-size: small;
+    margin-left:30%;
+    align-items: center;
+  }
+  .matfooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+
+  }
+  
+  .sidenav{
+ 
+    background-image:url("https://img.freepik.com/free-photo/background_53876-32169.jpg?w=2000");
+   background-size: cover;
+   background-repeat: no-repeat;
+  background-position: center center;
+  
+  }
+  .top{
+    background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+
+  }
+
+  .sidenav1{
+    background-color: #21D4FD;
+     width:11%;
+    
+    
+  }
+  .sidenav2{margin-left: 5px;
+    background-color: #21D4FD;
+   width:80%;
+   
+  }

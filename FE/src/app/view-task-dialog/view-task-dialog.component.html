@@ -1,0 +1,53 @@
+
+
+<div>
+    <div>
+      <h1>View Task</h1>
+      <form [formGroup]="viewTaskForm"   style="padding: 4px;">
+        <div>
+            <mat-form-field style="width: 300px;"  appearance="fill">
+              <mat-label>Task Id</mat-label>
+              <input matInput formControlName="taskId" readonly>
+            </mat-form-field>
+        </div>
+        <div >
+            <mat-form-field style="width: 300px;" appearance="fill">
+              <mat-label>Task Name</mat-label>
+              <textarea matInput formControlName="title" readonly></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 300px;" appearance="fill">
+            <mat-label>Assignee</mat-label>
+            <textarea matInput formControlName="assigne"  readonly></textarea>
+          </mat-form-field>
+      </div>
+        
+        <div>
+          <mat-form-field style="width: 300px;" appearance="fill">
+            <mat-label>Duration</mat-label>
+            <!-- <textarea matInput formControlName="deadline" ></textarea> -->
+            <input  type="date"  matInput formControlName="deadline"  readonly >
+            
+          </mat-form-field>
+      </div>
+        <div>
+              <mat-form-field style="width: 300px;" appearance="fill" [style.color]="viewTaskForm.value.priority">
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="priority" readonly>
+                  <mat-option value="green">Normal</mat-option>
+                  <mat-option value="blue">Medium</mat-option>
+                  <mat-option value="red">High</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+         
+          </form>
+          
+
+<mat-dialog-actions>
+  <button mat-dialog-close="false"  >close</button>
+</mat-dialog-actions>
+  </div>
+  </div>
+

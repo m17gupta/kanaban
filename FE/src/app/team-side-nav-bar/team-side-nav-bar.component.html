@@ -1,0 +1,41 @@
+<p>team-side-nav-bar works!</p>
+
+<mat-toolbar style="background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+" >
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+     <h1> KanBan </h1>
+   
+    </mat-toolbar-row>
+
+
+  
+    
+
+    
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav #sidenav opened="true" mode="side"   class="home">
+       
+      <mat-nav-list >
+        <a mat-list-item  routerLink="/about"  >About us</a>
+        <a mat-list-item  routerLink="/signup" >Sign Up</a>
+        <a mat-list-item  routerLink="/login" >login</a>
+        <a mat-list-item  routerLink="/home" >Home</a>
+        <!-- <a mat-list-item  (click)="createKanban()" style="color:black">Create kanaban</a> -->
+       
+    
+     </mat-nav-list>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height:88vh" >
+     
+     <app-home></app-home>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

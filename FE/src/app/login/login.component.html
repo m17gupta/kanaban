@@ -1,0 +1,98 @@
+
+
+<mat-toolbar style="background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+" >
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+     <h1> KanBan </h1>
+   
+    </mat-toolbar-row>
+
+</mat-toolbar>
+<mat-toolbar color="primary" class="matfooter">
+  <div class="footer">
+    CopyRight © Kanban Board 2022. ALL RIGHTS RESERVED. &nbsp;&nbsp;&nbsp;&nbsp; <a href="/privacy-policy " style="color:white;text-decoration: none;">Privacy Policy</a>
+  </div>
+  </mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav #sidenav opened="true" mode="side"   class="home">
+       
+      <mat-nav-list >
+        <a mat-list-item  routerLink="/about"  >About us</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item  routerLink="/signup" >Sign Up</a>
+         <mat-divider></mat-divider>
+        <!-- <a mat-list-item  routerLink="/login" >login</a> -->
+        <a mat-list-item  routerLink="/home" >Home</a>
+        <mat-divider></mat-divider>
+        <!-- <a mat-list-item  (click)="createKanban()" style="color:black">Create kanaban</a> -->
+       
+    
+     </mat-nav-list>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height:88vh" >
+     
+       
+<div class="signup">
+  <section class="vh-100" >
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6" >
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <form [formGroup]="loginForm" (ngSubmit)="login()" >
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example13" style="font-size:medium;">Email address</label>
+            <input type="email" id="form1Example13" class="form-control form-control-lg"  formControlName="emailId" />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example23" style="font-size:medium;">Password</label>
+            <input type="password" id="form1Example23" class="form-control form-control-lg" formControlName="password"  />
+           
+        
+          </div>
+          <div class="d-flex justify-content-around align-items-center mb-4">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <label class="form-check-label" for="form1Example3"> Remember me </label>
+            </div>
+            <a href="#!">Forgot password?</a>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          </div>
+
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="https://www.facebook.com"
+            role="button">
+            <i class="fab fa-facebook-f me-2" ></i>Continue with Facebook
+          </a>
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
+            role="button">
+            <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

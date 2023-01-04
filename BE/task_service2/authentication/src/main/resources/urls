@@ -1,0 +1,47 @@
+Authenication application
+-> signUp
+http://localhost:8888/employee-app/v1/employee-add
+{
+            "employeeName":"seetha",
+            "emailId":"seetha@gmail.com",
+            "role":"Backend engineer",
+            "password":"abc"
+}
+->login
+http://localhost:8888/employee-app/v1/employee-login
+{
+            "emailId":"seetha@gmail.com",
+            "password":"abc"
+}
+
+{
+    "message": "User successfully logged in",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyT2JqZWN0Ijp7ImVtYWlsSWQiOiJzZWV0aGFAZ21haWwuY29tIiwiZW1wbG95ZWVOYW1lIjoic2VldGhhIiwicm9sZSI6IkJhY2tlbmQgZW5naW5lZXIiLCJwYXNzd29yZCI6IiJ9LCJpYXQiOjE2Njg2MTM5NzF9.n-Bpd2y3y1JqZrXRXADRRlrp5Jy9RwUup8IYbz6dULnlDteO-qz3K4Ye_NKC4uzcj18I4cCiB9NcAnsGwxaw-Q"
+}
+TaskData Application
+-->
+ http://localhost:9999/employee-details/v1/add-user
+{
+    "employeeName": "seetha",
+    "role": "Backend engineer",
+    "taskDataList": []
+}
+-->add task
+  http://localhost:9999/employee-details/v1/add-task/seetha
+
+ {
+            "deadline":"12-3-2001",
+            "title":"witricity",
+            "status":"completed",
+            "assigne":"seetha",
+            "description":"wireless power transmission",
+            "priority":"high"
+ }
+-->get task by employee name
+http://localhost:9999/employee-details/v1/task-name/seetha
+
+-->delete task by name
+http://localhost:9999/employee-details/v1/delete-task-by-name/seetha
+
+--->update the task by name
+http://localhost:9999/employee-details/v1/update-task/seetha

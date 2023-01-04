@@ -1,0 +1,220 @@
+.form{
+  background-color: palegreen;
+  width:100%;
+  display:flex;
+
+}
+
+.mat-form-field {
+  width:50%;
+  margin-left: 25%;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.space{
+  margin-left: 40px;
+}
+
+
+.form{
+  background-color: aqua;
+  width:100%;
+  display:flex;
+
+}
+
+.mat-form-field {
+  width:50%;
+  margin-left: 25%;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.space{
+  margin-left: 40px;
+}
+.example-card {
+  max-width: 400px;
+  max-height: 300px;
+  /* margin-top: 50px; */
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform .2s;
+} 
+.example-card:hover{
+  transform: scale(1.1);
+}
+
+/* .example-card1 {
+  max-height:400px;
+  max-width: 400px;
+  /* margin-left: 350px;  */
+  /* margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  position: relative;
+
+}  */ 
+
+ .example-card .btn {
+  position: absolute;
+ bottom: 2%;
+  left: 40%;
+  font-size: 20px;
+}
+.head{
+  background-image: url('src\assets\19871.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:90% 90%;
+  background-position:98% 55%;
+  width: 100%;
+  height: 88vh;
+ }
+ 
+ .welcome{
+  justify-content: center;
+  margin-left: 419px;
+  /* margin-top: 60px; */
+  background-color:transparent;
+
+}
+
+
+.example-container {
+    width: 350px;
+    max-width: 100%;
+    margin: 10px 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    
+  }
+  
+  .example-list {
+    border: solid 1px #ccc;
+    min-height: 60px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .example-box {
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(58, 60, 80, 0.87);
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: rgb(255, 255, 255);
+    font-size: 14px;
+  }
+  
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(46, 22, 226, 0.2),
+                0 8px 10px 1px rgba(17, 36, 201, 0.14),
+                0 3px 14px 2px rgba(198, 190, 190, 0.12);
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-box:last-child {
+    border: none;
+  }
+  
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .example-container1 {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border: 1px solid rgb(181, 240, 211);
+  }
+  .pic{
+    width:60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 800px;
+    margin-top: 60px;
+  
+  }
+  .space{
+    margin-left: 1100px;
+    padding-top: -100px;
+  }
+
+
+  .pic{
+    width:60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+  
+  }
+
+  .search{
+    background-color: transparent;
+    border-radius: 50px;
+    border-style:outset;
+    border-width: 0.5px;
+    width:400px;
+    margin-right: 20px;
+  }
+  
+  .mic{
+    margin-right: 20px;
+  }
+
+  .footer{
+    margin-top: auto;
+    font-size: small;
+    margin-left:30%;
+    align-items: center;
+  }
+  .matfooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #8bb7d0;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  }
+  .team{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    
+
+  }
+  .side1{
+    background-color: #08AEEA;
+background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+  }
+  .home{
+    background-color: #3097d3;
+    background-image: linear-gradient(160deg, #79bfeb 0%, #80D0C7 100%);
+width:10%;
+
+  }
+  

@@ -1,0 +1,156 @@
+
+
+<mat-toolbar style="background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+" >
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+     <h1> KanBan </h1>
+   
+    </mat-toolbar-row>
+
+    <mat-toolbar color="primary" class="matfooter">
+      <div class="footer">
+        CopyRight © Kanban Board 2022. ALL RIGHTS RESERVED. &nbsp;&nbsp;&nbsp;&nbsp; <a href="/privacy-policy " style="color:white;text-decoration: none;">Privacy Policy</a>
+      </div>
+      </mat-toolbar>
+  
+    
+
+    
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav #sidenav opened="true" mode="side"   class="home">
+       
+      <mat-nav-list >
+        <a mat-list-item  routerLink="/about"  >About us</a>
+        <mat-divider></mat-divider>
+        <!-- <a mat-list-item  routerLink="/signup" >Sign Up</a> -->
+        <a mat-list-item  routerLink="/login" >login</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item  routerLink="/home" >Home</a>
+        <!-- <a mat-list-item  (click)="createKanban()" style="color:black">Create kanaban</a> -->
+     </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="height:88vh" >
+     
+        
+    
+<div >
+  
+      
+        <!-- <div class="row d-flex justify-content-center align-items-center h-100"> -->
+          <!-- <div class="col-lg-12 col-xl-11"> -->
+            <div class="card text-black" style="background-color: #08AEEA;
+            background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+             ">
+              <div class="card-body p-md-5" style="width: 100%;">
+                <div class="row justify-content-center" >
+                  <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+    
+                    <form class="mx-1 mx-md-4"   [formGroup]="signupForm"  (ngSubmit)="signup()"   >
+     
+                  
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example3c"  style="font-size:medium;">Employee Name</label>
+                          <input type="text" id="form3Example3c" class="form-control"
+                            placeholder="Enter Employee name" formControlName="employeeName" style="width:80%"/>
+                          
+                          <span class="text-danger" *ngIf="signupForm.get('employeeName')?.hasError('required') && 
+                             (signupForm.get('employeeName')?.dirty || signupForm.get('employeeName')?.touched)"> User name must be filled
+                           </span>
+                           <span class="text-danger" *ngIf= "signupForm.get('employeeName')?.hasError('maxLength')"> max length should 
+                           </span>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c" style="font-size:medium;">Email Id</label>
+                          <input type="text" id="form3Example4c" class="form-control"
+                          placeholder="Enter Email Id" formControlName="emailId"  style="width:80%"/>
+                          <span class="text-danger"  *ngIf="signupForm.get('emailId')?.hasError('required') && (signupForm.get('emailId')?.dirty || signupForm.get('emailId')?.touched)">emailId must be filled</span>
+                            <span class="text-danger"  *ngIf= "signupForm.get('emailId')?.hasError('emailValidate')"> Email format error </span>
+                        </div>
+                      </div>
+  
+                       <!-- role -->
+                       <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4cd" style="font-size:medium;">Select Role</label>
+                       <div >
+                        <div >
+      
+                          <select class="select" formControlName="role" style="width:50%; height:30px; border-radius: 5px;">
+                            <option value="select" style="font-size:medium;">Select</option>
+                            <option value="project manager">Project Manager</option>
+                            <option value="team Member">Team Member</option>
+                           
+                          </select>
+      
+                        </div>
+                       </div>
+                        </div>
+                       </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4cd" style="font-size:medium;">Password</label>
+                          <input type="password" id="form3Example4cd" class="form-control"
+                          placeholder="Enter password" formControlName="password" style="width:80%" />
+                           
+                         <span class="text-danger" *ngIf="signupForm.get('password')?.hasError('required') && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">password is required </span>
+                         <span class="text-danger" *ngIf= "signupForm.get('password')?.hasError('passwordValidate')">Password must requires atleast one uppercase,one lower case,one special charecter and one number </span>
+  
+                        </div>
+                      </div>
+    
+                      <div class="form-check d-flex justify-content-center mb-5">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                        <label class="form-check-label" for="form2Example3">
+                          I agree all statements in <a href="#!">Terms of service</a>
+                        </label>
+                      </div>
+    
+                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                        <button type="button" class="btn btn-primary btn-lg"  type="submit">Register</button>
+                      </div>
+    
+                    </form>
+    
+  
+                    
+                  </div>
+                  <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+    
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                      class="img-fluid" alt="Sample image">
+    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        <!-- </div> -->
+      <!-- </div> -->
+    
+    
+    
+  
+
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

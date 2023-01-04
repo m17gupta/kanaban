@@ -1,0 +1,176 @@
+.example-container {
+    width: 350px;
+    max-width: 100%;
+    margin: 10px 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    
+
+
+  }
+  
+  .example-list {
+    border: solid 1px #ccc;
+    min-height: 60px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+    
+  }
+  
+  .example-box {
+    padding: 20px 10px ;
+    border-bottom: solid 1px #ccc;
+    color: rgba(58, 60, 80, 0.87);
+    /* display:flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: rgb(255, 255, 255);
+    font-size: 14px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(46, 22, 226, 0.2),
+                0 8px 10px 1px rgba(17, 36, 201, 0.14),
+                0 3px 14px 2px rgba(198, 190, 190, 0.12);
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-box:last-child {
+    border: none;
+  }
+  
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .example-container1 {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border: 1px solid rgb(181, 240, 211);
+  }
+  .pic{
+    width:60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 800px;
+    margin-top: 60px;
+  
+  }
+  .space{
+    margin-left: 1100px;
+    padding-top: -100px;
+  }
+
+
+  .footer{
+    margin-top: auto;
+    font-size: small;
+    margin-left:30%;
+    align-items: center;
+  }
+  .matfooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+/* 
+  .sidenav{
+   background-image:url("https://img.freepik.com/free-photo/copy-spaced-background-with-studying-items_23-2147864599.jpg?w=2000");
+   background-size: cover;
+   background-repeat: no-repeat;
+  background-position: center center;
+
+  } */
+  .page{
+    background-color:transparent;
+    margin-top:220px;
+    font-size:large;
+
+  }
+  .pic{
+    width:60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left:50px;
+    margin-top: 10px;
+  
+  }
+  .footer{
+    margin-top: auto;
+    font-size: small;
+    margin-left:30%;
+    align-items: center;
+  }
+  .matfooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #8bb7d0;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+  }
+
+  .top{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+  }
+
+  .sidenav1{
+   
+    background-color: #3097d3;
+    background-image: linear-gradient(160deg, #79bfeb 0%, #80D0C7 100%);
+     width:11%;
+    
+    
+  }
+  .sidenav2{margin-left: 5px;
+    background-color: #3097d3;
+    background-image: linear-gradient(160deg, #79bfeb 0%, #80D0C7 100%);
+   width:80%;
+   
+  }
+.add-task-button
+{
+
+  background-color: #3097d3;
+  /* background-image: linear-gradient(160deg, #79bfeb 0%, #80D0C7 100%); */
+  border-radius: 30px;
+
+}
+
+.add{
+ 
+  color: black;
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  border-radius: 20px;
+  background-color: #68d8d6;
+  
+}

@@ -1,0 +1,63 @@
+
+<mat-toolbar class="top" >
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+     <h1> KanBan </h1>
+    
+    </mat-toolbar-row>
+  
+</mat-toolbar>
+<mat-toolbar color="primary" class="matfooter">
+  <div class="footer">
+    COPYRIGHT © Kanban Board 2022. ALL RIGHTS RESERVED. &nbsp;&nbsp;&nbsp;&nbsp; <a href="/privacy-policy " style="color:white;text-decoration: none;">Privacy Policy</a>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav #sidenav opened="true" mode="side" class="sidenav1" >
+        <div style="display:inline-block">
+            <img class="pic"
+              src="./assets/pngtree-business-people-avatar-icon-user-profile-free-vector-png-image_4815126.jpg"><br>
+              
+            <h3 style="margin-left: 30px ;">{{name}}</h3>
+            <h3 style="margin-left:20px ;">Project Manager</h3>
+          </div>
+          <hr>
+      <mat-nav-list >
+        <a mat-list-item style="color:black"><mat-icon>dashboard</mat-icon>DashBoard</a>
+        <a mat-list-item  style="color:black"> <mat-icon>help</mat-icon>Help</a>
+        <a mat-list-item  routerLink="/logout" style="color:black"> <mat-icon>logout</mat-icon>log Out</a>
+        <a mat-list-item  (click)="createKanban()" style="color:black">Create kanaban</a>
+       
+        <hr>
+    <!-- display all projects  -->
+       <div style="color:black ;">
+        <h3 style="margin-left:10px ;">List of Project Name</h3>
+        <mat-form-field appearance="outline"  class="sidenav2" >
+           <mat-label>Project Name</mat-label>
+            <mat-select #val    >
+               
+              <mat-option  *ngFor="let t of project" value="{{t.projectId}}" >{{t.projectName}}</mat-option>
+             
+          
+            
+      
+            </mat-select>
+           
+          </mat-form-field> <br>
+          <button mat-raised-button  color="primary"  (click)="selectProject(val.value)" >select</button>
+        </div>
+
+     </mat-nav-list>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height:88vh;background-color: aliceblue;color: black;" class="sidenav">
+      <app-kanaban-home></app-kanaban-home>
+    
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+

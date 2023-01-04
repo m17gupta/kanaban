@@ -1,0 +1,26 @@
+
+
+  
+<div>
+
+    <form [formGroup]="columnForm1" (ngSubmit)="addColumn()">
+      <mat-form-field appearance="outline">
+        <mat-label>Column Name</mat-label>
+        <textarea matInput formControlName="columnId" ></textarea>
+        <!-- <input matInput placeholder="column Id" formControlName="columnId"> -->
+      </mat-form-field>
+      <br>
+
+      <!-- <mat-form-field appearance="outline">
+        <mat-label>Column Name</mat-label>
+        <textarea matInput formControlName="columnName" ></textarea>
+        
+      </mat-form-field> -->
+      <br>
+
+      <button type="submit" mat-raised-button color="primary" [disabled]="columnForm1.invalid">Add</button>&nbsp; &nbsp; &nbsp; &nbsp;
+      <button mat-dialog-close="false"  mat-raised-button color="primary">close</button>
+    </form>
+    
+
+  </div>

@@ -1,0 +1,64 @@
+   
+<mat-dialog-content >
+    <div  *ngIf="isDialogEnable">
+      <!-- <form  [formGroup]="projectForm"  (ngSubmit)="project()" 
+      style="width:80%; margin-left:10%;margin-top: 5%;background-color: rgb(243, 162, 63)" >
+        <h1> Create Kanban</h1> 
+        <mat-form-field  appearance="outline" style="width:90%">
+              <mat-label>Project Id</mat-label>
+              <input matInput placeholder="Project Id" formControlName="projectId" >
+            </mat-form-field>
+          
+           <br>
+    
+           <mat-form-field  appearance="outline" style="width:90%">
+            <mat-label>Project Name</mat-label>
+            <input matInput placeholder="Project Name" formControlName="projectName" >
+          </mat-form-field>
+        
+         <br>
+          <div>
+         <mat-form-field  appearance="outline"  style="width:90%">
+          <mat-label>Duration</mat-label>
+          <input matInput placeholder="duration" formControlName="duration"  >
+        </mat-form-field> <br>
+        <button  class="mat-raised-button mat-primary" type="submit"  >Save</button>
+    
+          </div>
+          
+        
+      </form> -->
+
+      <form [formGroup]="projectForm"  (ngSubmit)="project()"  style="padding: 4px;">
+        <div>
+            <mat-form-field style="width: 300px;"  appearance="fill">
+              <mat-label>Project Id</mat-label>
+              <input matInput formControlName="projectId">
+            </mat-form-field>
+        </div>
+        <div >
+            <mat-form-field style="width: 300px;" appearance="fill">
+              <mat-label>Project Name</mat-label>
+              <textarea matInput formControlName="projectName"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 300px;" appearance="fill">
+            <mat-label>Duration</mat-label>
+            <textarea matInput formControlName="duration" ></textarea>
+          </mat-form-field>
+      </div>
+        
+        
+            <!-- <button type="submit"  >Add</button> -->
+            <button type="submit" mat-raised-button color="primary" [disabled]="projectForm.invalid">Add</button>&nbsp; &nbsp; &nbsp; &nbsp;
+            <button mat-dialog-close="false"  mat-raised-button color="primary">close</button>
+          </form>
+
+
+    </div>
+    
+    <!-- </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-dialog-close="false"  >close</button>
+    </mat-dialog-actions> -->
